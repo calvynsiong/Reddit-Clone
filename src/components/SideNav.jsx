@@ -116,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'flex-start',
-	},
+	}
 }));
 
 function SideNav(props) {
@@ -184,8 +184,8 @@ function SideNav(props) {
 			<List className={classes.list}>
 				{['Popular', 'All', 'Random', 'Users', 'Top Communities'].map(
 					(text, index) => (
-						<ListItem button key={text}>
-							<ListItemText primary={text} />
+						<ListItem button key={text} >
+							<ListItemText primary={text}/>
 						</ListItem>
 					),
 				)}

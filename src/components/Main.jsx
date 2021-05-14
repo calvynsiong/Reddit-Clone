@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AiOutlineBell, AiOutlineUser } from 'react-icons/ai';
 import { Toolbar, Typography, Tabs, Tab, AppBar } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
 		flexGrow: 1,
@@ -29,10 +29,19 @@ const useStyles = makeStyles(() => ({
 			padding: '.2em',
 		},
 	},
+	active: {
+		color: theme.palette.secondary.main,
+		borderBottom: `2px ${theme.palette.secondary.main} solid`,
+	},
 }));
 
 const Main = () => {
 	const classes = useStyles();
+	const [value, setValue] = React.useState(0);
+
+	const handleChange = (event, newValue) => {
+		setValue(newValue);
+	};
 
 	return (
 		<div className={classes.root}>
@@ -40,11 +49,17 @@ const Main = () => {
 				<Toolbar style={{ display: 'flex', width: '100%', margin: 'auto' }}>
 					<Tabs
 						variant='scrollable'
+						value={value}
 						className={classes.tab}
+						onChange={handleChange}
 						aria-label='simple tabs example'
-						indicatorColor='primary'
-						textColor='primary'>
-						<Tab label='Popular' color='primary' style={{ minWidth: 50 }} />
+						indicatorColor='secondary'
+						textColor='secondary'>
+						<Tab
+							label='Popular'
+							style={{ minWidth: 50 }}
+							// className={classes.active}
+						/>
 						<Tab label='Hot' style={{ minWidth: 50 }} />
 						<Tab label='Rising' style={{ minWidth: 50 }} />
 						<Tab label='Global' style={{ minWidth: 50 }} />
