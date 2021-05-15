@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from 'react-icons/fa';
-import { Container, Typography } from '@material-ui/core';
+import { Container, Typography, Divider } from '@material-ui/core';
 
 const useStyles = makeStyles({
 	Post: {
@@ -42,24 +42,27 @@ const useStyles = makeStyles({
 const Post = (props) => {
 	const classes = useStyles();
 
-	const { upvotes, image, user, subreddit, title, comments } = props.post;
+	const { upvotes, image, user, subreddit, title, comments, id } = props.post;
 
 	return (
-		<Container className={classes.Post}>
-			<div className={classes.Left}>
-				<FaArrowAltCircleUp size={30}></FaArrowAltCircleUp>
-				<span>{upvotes}</span>
-				<FaArrowAltCircleDown size={30}></FaArrowAltCircleDown>
-			</div>
-			<div className={classes.Center}>
-				<img src={image} alt={title} />
-			</div>
-			<div className={classes.Right}>
-				<Typography variant='h6' className={classes.Title}>
-					{title}
-				</Typography>
-			</div>
-		</Container>
+		<>
+            <Container className={classes.Post}>
+                <div className={classes.Left}>
+                    <FaArrowAltCircleUp size={30}></FaArrowAltCircleUp>
+                    <span>{upvotes}</span>
+                    <FaArrowAltCircleDown size={30}></FaArrowAltCircleDown>
+                </div>
+                <div className={classes.Center}>
+                    <img src={image} alt={title} />
+                </div>
+                <div className={classes.Right}>
+                    <Typography variant='h6' className={classes.Title}>
+                        {title}
+                    </Typography>
+                </div>
+            </Container>
+            {id===props.max? <></>: <Divider/>}
+        </>
 	);
 };
 

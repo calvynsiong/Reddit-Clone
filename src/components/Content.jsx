@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from './Post.jsx';
-import { posts } from '../data/data.js';
-import { Typography, makeStyles } from '@material-ui/core';
+import  posts  from '../data/data.js';
+import { Typography, makeStyles,Paper } from '@material-ui/core';
 
 const useStyles = makeStyles({
 	post: {
@@ -9,22 +9,25 @@ const useStyles = makeStyles({
         flexDirection:"column",
 		margin: '0 auto',
 		maxWidth: '95vw',
-		backgroundColor: 'white',
 		padding: '1em',
 		borderRadius: '5px',
-		boxShadow: '-1px 0px 5px 5px #F4f5fa',
 	},
 });
 const Content = () => {
-	const classes = useStyles();
+    const classes = useStyles();
+    console.log('====================================');
+    console.log(posts.length);
+    console.log('====================================');
 
 	return (
-		<div className={classes.post}>
-			{posts.map((post) => {
-				return <Post post={post}></Post>;
-			})}
-		</div>
-	);
+		<Paper className={classes.post}>
+            {posts.map((post, index) => {
+                    console.log(index);
+                    return <Post key={index} max={posts.length}  post={post}></Post>;
+                })}
+       
+        </Paper>
+                );
 };
 
 export default Content;

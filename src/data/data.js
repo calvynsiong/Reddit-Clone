@@ -1,6 +1,7 @@
-export const posts = [
+const posts = [
 
 {
+    id:1,
     upvotes: 1600,
     image: "https://ionicframework.com/blog/wp-content/uploads/2019/02/typescript-in-react.png",
     user: "cassiooze",
@@ -10,6 +11,7 @@ export const posts = [
 
 },
 {
+    id:2,
     upvotes: 7250,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Jayson_Tatum_%282018%29.jpg/1200px-Jayson_Tatum_%282018%29.jpg",
     user: "LeUnbeatableJames23",
@@ -19,6 +21,7 @@ export const posts = [
 
 },
 {
+    id:3,
     upvotes: 2804 ,
     image: `https://images.immediate.co.uk/production/volatile/sites/23/2019/09/GettyImages-653444200-dodo_Nastasic-218f5f6.jpg?quality=90&resize=768%2C574`,
     user: `pal1ndr0me`,
@@ -28,6 +31,7 @@ export const posts = [
 
 },
 {
+    id:4,
     upvotes: 599 ,
     image: `https://styles.redditmedia.com/t5_2rh4c/styles/communityIcon_6sf4l183e5r01.png?width=256&s=be17ed9aa695a6ee3cda73e86b468e7e10742261`,
     user: `TheRoyalGallard`,
@@ -37,6 +41,7 @@ export const posts = [
 
 },
 {
+    id:5,
     upvotes: 42,
     image: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2BDmQJf4X0pHVx3g99WtUKxPyYvd70j5JXg&usqp=CAU`,
     user: `seandon`,
@@ -50,3 +55,5 @@ export const posts = [
 
 
 ]
+
+export default posts

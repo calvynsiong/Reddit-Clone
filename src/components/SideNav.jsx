@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
 		justifyContent: 'space-between',
+		zIndex:"100000",
 		
 	},
 	search: {
