@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		boxShadow: 'none',
 		background: 'transparent',
+		zIndex: "1",
 	},
 	tab: {
 		display: 'flex',

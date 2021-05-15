@@ -28,7 +28,7 @@ const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
-		justifyContent: 'space-between',
+		// justifyContent: 'space-between',
 		zIndex:"100000",
 		
 	},
@@ -232,16 +232,17 @@ function SideNav(props) {
 				<Toolbar className={classes.root}>
 					<IconButton
 						color='inherit'
+						// disableRipple="true"
 						aria-label='open drawer'
 						edge='start'
 						onClick={handleDrawerToggle}
 						className={classes.menuButton}>
 						<FcReddit />
+					</IconButton>
 
 						<Typography variant='h6' color='secondary' style={{marginLeft:"1em"}}noWrap>
 							Reddit
 						</Typography>
-					</IconButton>
 				</Toolbar>
 			</AppBar>
 			<nav className={classes.drawer} aria-label='mailbox folders'>

@@ -8,6 +8,8 @@ const posts = [
     subreddit: "Typescript",
     title: "A Typescript-first State Machine library for React",
     comments: 12,
+    time: 11,
+    
 
 },
 {
@@ -18,6 +20,7 @@ const posts = [
     subreddit: "Nba",
     title: `[Wojnarowski] Jayson Tatum on the after-effects of COVID-19: "It's hard to explain and hard to pinpoint -- but I don't necessarily feel or breathe the same that I did before I had COVID.`,
     comments:800 ,
+    time: 2 ,
 
 },
 {
@@ -28,6 +31,7 @@ const posts = [
     subreddit: `ShowerThoughts`,
     title: `The Dodo is extinct because it was flightless and delicious. The Chicken is the most populous bird in the world for the same reasons.`,
     comments: 232,
+    time: 4,
 
 },
 {
@@ -35,9 +39,10 @@ const posts = [
     upvotes: 599 ,
     image: `https://styles.redditmedia.com/t5_2rh4c/styles/communityIcon_6sf4l183e5r01.png?width=256&s=be17ed9aa695a6ee3cda73e86b468e7e10742261`,
     user: `TheRoyalGallard`,
-    subreddit: ``,
+    subreddit: `HipHopHeads`,
     title: `New Music Friday: May 14th, 2021`,
     comments: 478,
+    time: 3,
 
 },
 {
@@ -48,6 +53,7 @@ const posts = [
     subreddit: `LeanFire`,
     title: `LCOL areas in Canada`,
     comments: 11,
+    time: 1,
 
 },
 

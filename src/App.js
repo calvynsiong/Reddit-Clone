@@ -4,6 +4,7 @@ import {SideNav,Main,Content} from "./components"
 
 const useStyles = makeStyles({
   resets: {
+    minHeight:"100vh",
     height: "100%",
     paddingBottom: "4em"
   }
